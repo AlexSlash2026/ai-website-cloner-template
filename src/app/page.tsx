@@ -2,7 +2,7 @@ import { Header } from "@/components/sites/stolitsa-turfirma-ru/Header";
 import { MissionSection } from "@/components/sites/stolitsa-turfirma-ru/MissionSection";
 import { TouristOfferings } from "@/components/sites/stolitsa-turfirma-ru/TouristOfferings";
 import { ReasonsSection } from "@/components/sites/stolitsa-turfirma-ru/ReasonsSection";
-import { NewTourPromo } from "@/components/sites/stolitsa-turfirma-ru/NewTourPromo";
+//import { NewTourPromo } from "@/components/sites/stolitsa-turfirma-ru/NewTourPromo";
 import { TourGuidesSection } from "@/components/sites/stolitsa-turfirma-ru/TourGuidesSection";
 import { TestimonialsSection } from "@/components/sites/stolitsa-turfirma-ru/TestimonialsSection";
 import { TransportSection } from "@/components/sites/stolitsa-turfirma-ru/TransportSection";
@@ -21,8 +21,8 @@ export default function Home() {
         <Divider />
         <ReasonsSection />
         <Divider />
-        <NewTourPromo />
-        <Divider />
+        {/* <NewTourPromo /> */}
+        {/*<Divider />*/}
         <TourGuidesSection />
         <Divider />
         <TestimonialsSection />

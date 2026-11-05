@@ -1,86 +1,78 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
-
-const carouselImages = [
-  "/sites/stolitsa-turfirma-ru/images/hit_p1.jpg",
-  "/sites/stolitsa-turfirma-ru/images/hit_p2.jpg",
-  "/sites/stolitsa-turfirma-ru/images/hit_p3.jpg",
-];
 
 export function NewTourPromo() {
-  const [activeSlide, setActiveSlide] = useState(0);
-
-  const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % carouselImages.length);
-  };
-
-  const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-  };
-
   return (
-    <section className="py-16 bg-white">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-12">
-          Новинка - экскурсия в Самару и Чебоксары!
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          {/* Text column */}
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          
+          {/* Текстовая часть */}
           <div>
-            <p className="text-base leading-relaxed text-gray-700">
-              Наше уникальное предожение - познавательный и разнообразный трехдневный
-              круиз в Самару и Чебоксары! Во время путешествия вы прикоснетесь к
-              совершенно разным культурам и традцициям, лучше узнаете историю этих
-              городов и местные обычаи, отведаете необыкновенные блюда, насладитесь
-              видами Волги, привезете домой самарские сладости и уникальные чувашские
-              сувениры. Торопитесь! Стартуем навстречу приключениям уже 24 сентября!
+            <span 
+              className="inline-block py-1 px-3 bg-cyan-50 text-cyan-700 text-sm font-semibold mb-4"
+              style={{ borderRadius: "20px" }}
+            >
+              Новинка
+            </span>
+            <h2 className="text-3xl font-semibold tracking-tight text-gray-900 mb-6">
+              Экскурсия в Самару и Чебоксары!
+            </h2>
+            <p className="text-lg leading-relaxed text-gray-600 mb-8">
+              Приглашаем вас в увлекательное путешествие по городам России. 
+              Вас ждут великолепные виды на Волгу, богатая история и незабываемые впечатления.
             </p>
+            <a
+              href="#"
+              className="inline-block bg-cyan-600 text-white font-medium px-6 py-3 hover:bg-cyan-700 transition-colors duration-200 shadow-sm"
+              style={{ borderRadius: "8px" }}
+            >
+              Забронировать тур
+            </a>
           </div>
 
-          {/* Carousel column */}
-          <div className="relative max-w-md mx-auto">
-            <div className="relative aspect-[4/3] overflow-hidden rounded-lg">
+          {/* Журнальный коллаж */}
+          <div className="grid grid-cols-2 gap-4">
+            
+            {/* Главная картинка (сверху, на всю ширину) */}
+            <div 
+              className="col-span-2 relative w-full h-64 md:h-72 overflow-hidden group"
+              style={{ borderRadius: "16px" }}
+            >
               <Image
-                src={carouselImages[activeSlide]}
-                alt={`Slide ${activeSlide + 1}`}
-                width={400}
-                height={300}
-                className="w-full h-auto"
+                src="/sites/stolitsa-turfirma-ru/images/hit_p1.jpg"
+                alt="Самара"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
               />
             </div>
 
-            {/* Carousel controls */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
-              aria-label="Previous slide"
+            {/* Две маленькие картинки (снизу) */}
+            <div 
+              className="col-span-1 relative w-full h-40 md:h-48 overflow-hidden group"
+              style={{ borderRadius: "16px" }}
             >
-              <i className="fa fa-chevron-left text-gray-800"></i>
-            </button>
-            <button
-              onClick={nextSlide}
-              className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white p-2 rounded-full shadow-lg"
-              aria-label="Next slide"
-            >
-              <i className="fa fa-chevron-right text-gray-800"></i>
-            </button>
-
-            {/* Indicators */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
-              {carouselImages.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveSlide(index)}
-                  className={`w-3 h-3 rounded-full ${
-                    index === activeSlide ? "bg-white" : "bg-white/50"
-                  }`}
-                  aria-label={`Go to slide ${index + 1}`}
-                />
-              ))}
+              <Image
+                src="/sites/stolitsa-turfirma-ru/images/hit_p2.jpg"
+                alt="Чебоксары"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
             </div>
+            
+            <div 
+              className="col-span-1 relative w-full h-40 md:h-48 overflow-hidden group"
+              style={{ borderRadius: "16px" }}
+            >
+              <Image
+                src="/sites/stolitsa-turfirma-ru/images/hit_p3.jpg"
+                alt="Природа"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+
           </div>
+
         </div>
       </div>
     </section>

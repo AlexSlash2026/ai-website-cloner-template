@@ -1,36 +1,12 @@
 import Image from "next/image";
 
 const offerings = [
-  {
-    title: "Экскурсии по Уфе",
-    image: "/sites/stolitsa-turfirma-ru/images/fontan_7d.png",
-    href: "https://www.stolitsa-turfirma.ru/index.php/ekskursii-v-ufe",
-  },
-  {
-    title: "Маршруты по Башкирии",
-    image: "/sites/stolitsa-turfirma-ru/images/routs_rb.jpg",
-    href: "https://www.stolitsa-turfirma.ru/",
-  },
-  {
-    title: "Санатории",
-    image: "/sites/stolitsa-turfirma-ru/images/sanatorium.jpg",
-    href: "#",
-  },
-  {
-    title: "Туры по России",
-    image: "/sites/stolitsa-turfirma-ru/images/saintp.jpg",
-    href: "https://www.stolitsa-turfirma.ru/",
-  },
-  {
-    title: "Прием гостей в Уфе",
-    image: "/sites/stolitsa-turfirma-ru/images/reciving_guests2.jpg",
-    href: "https://www.stolitsa-turfirma.ru/index.php/priem-gostei-v-ufe",
-  },
-  {
-    title: "Отдых за рубежом",
-    image: "/sites/stolitsa-turfirma-ru/images/sea_holiday_250.jpg",
-    href: "#",
-  },
+  { title: "Экскурсии по Уфе", image: "/new/sites/stolitsa-turfirma-ru/images/fontan_7d.png", href: "https://www.stolitsa-turfirma.ru/index.php/ekskursii-v-ufe" },
+  { title: "Маршруты по Башкирии", image: "/new/sites/stolitsa-turfirma-ru/images/routs_rb.jpg", href: "https://www.stolitsa-turfirma.ru/" },
+  { title: "Санатории", image: "/new/sites/stolitsa-turfirma-ru/images/sanatorium.jpg", href: "#" },
+  { title: "Туры по России", image: "/new/sites/stolitsa-turfirma-ru/images/saintp.jpg", href: "https://www.stolitsa-turfirma.ru/" },
+  { title: "Прием гостей в Уфе", image: "/new/sites/stolitsa-turfirma-ru/images/reciving_guests2.jpg", href: "https://www.stolitsa-turfirma.ru/index.php/priem-gostei-v-ufe" },
+  { title: "Отдых за рубежом", image: "/new/sites/stolitsa-turfirma-ru/images/sea_holiday_250.jpg", href: "#" },
 ];
 
 export function TouristOfferings() {

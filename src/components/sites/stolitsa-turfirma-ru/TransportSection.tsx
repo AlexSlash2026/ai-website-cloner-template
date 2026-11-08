@@ -15,9 +15,10 @@ const pricing = [
 
 export function TransportSection() {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-semibold tracking-tight text-gray-900 text-center mb-12">
+    <section className="py-16 bg-transparent">
+      <div className="container mx-auto px-4 max-w-6xl">
+
+        <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 text-center mb-12">
           Наш экскурсионный транспорт
         </h2>
         
@@ -26,10 +27,16 @@ export function TransportSection() {
           {transports.map((transport, index) => (
             <div 
               key={index} 
-              className="group flex flex-col items-center bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100"
-              style={{ borderRadius: "16px" }}
+              className="group flex flex-col items-center bg-white p-6 shadow-sm hover:shadow-md transition-all duration-300 border border-[#E5E0D8]"
+              style={{ 
+                borderRadius: "24px", 
+                boxShadow: "0 4px 20px rgba(0,0,0,0.03)" 
+              }}
             >
-              <div className="relative w-full h-40 overflow-hidden mb-6" style={{ maxWidth: "280px", borderRadius: "12px" }}>
+              <div 
+                className="relative w-full h-48 overflow-hidden mb-6" 
+                style={{ borderRadius: "16px" }}
+              >
                 <img
                   src={transport.image}
                   alt={transport.title}
@@ -38,32 +45,32 @@ export function TransportSection() {
               </div>
               <div className="text-center flex flex-col flex-grow">
                 <h3 className="text-xl font-medium text-gray-900 mb-2">{transport.title}</h3>
-                <p className="text-gray-600 leading-relaxed">{transport.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm">{transport.description}</p>
               </div>
             </div>
           ))}
         </div>
 
         {/* Блок с ценами на транспорт (Таблица) */}
-        <div className="max-w-4xl mx-auto">
+        <div className="w-full mx-auto">
           <h3 className="text-2xl font-semibold text-gray-900 text-center mb-8">
             Стоимость экскурсии
           </h3>
           
           <div 
-            className="overflow-x-auto shadow-sm border border-gray-200"
-            style={{ borderRadius: "16px" }}
+            className="overflow-x-auto shadow-sm border border-[#E5E0D8] bg-white"
+            style={{ borderRadius: "24px" }}
           >
             <table className="w-full text-left border-collapse min-w-[600px]">
               <thead>
-                <tr className="bg-cyan-600 text-white">
-                  <th className="p-4 font-medium border-b border-cyan-700 w-2/3">Вид транспорта</th>
-                  <th className="p-4 font-medium border-b border-cyan-700 text-center w-1/3">Стоимость (3 часа)</th>
+                <tr className="bg-cyan-700 text-white">
+                  <th className="p-4 font-medium border-b border-cyan-800 w-2/3">Вид транспорта</th>
+                  <th className="p-4 font-medium border-b border-cyan-800 text-center w-1/3">Стоимость (3 часа)</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100 bg-white">
+              <tbody className="divide-y divide-gray-100">
                 {pricing.map((item, index) => (
-                  <tr key={index} className="hover:bg-gray-50 transition-colors duration-200">
+                  <tr key={index} className="hover:bg-[#F8F6F0] transition-colors duration-200">
                     <td className="p-4">
                       <div className="font-medium text-gray-900">{item.transport}</div>
                       <div className="text-sm text-gray-500 mt-1">{item.capacity}</div>

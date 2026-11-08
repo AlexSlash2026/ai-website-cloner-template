@@ -29,20 +29,20 @@ export function Header() {
               
               {/* Слоган в одну строку с разделителем */}
               <div className="hidden lg:flex items-center gap-6">
-                {/* Уменьшили высоту разделителя до h-12 */}
-                <div className="w-px h-12 bg-gray-200"></div>
+                <div className="w-px h-16 bg-gray-200"></div>
                 <p 
-                  className="text-cyan-700 whitespace-nowrap"
+                  className="text-[#002B80] whitespace-nowrap"
                   style={{ 
                     fontFamily: "var(--font-caveat)", 
-                    fontSize: "2.6rem", /* Чуть уменьшили, чтобы слоган смотрелся гармонично в узкой шапке */
+                    fontSize: "2.6rem", 
                     lineHeight: "1" 
                   }}
                 >
                   В «Столице» история Уфы бережно хранится!
                 </p>
               </div>
-            </div>
+              
+            </div> {/* <--- ВОТ ЭТОТ ЗАКРЫВАЮЩИЙ ТЕГ БЫЛ ПОТЕРЯН */}
 
             {/* Кнопка меню (мобильная) */}
             <button

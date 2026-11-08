@@ -1,3 +1,5 @@
+import { CompanyAwardsSection } from "@/components/sites/stolitsa-turfirma-ru/CompanyAwardsSection";
+import { EventsSection } from "@/components/sites/stolitsa-turfirma-ru/EventsSection";
 import { Header } from "@/components/sites/stolitsa-turfirma-ru/Header";
 import { MissionSection } from "@/components/sites/stolitsa-turfirma-ru/MissionSection";
 import { TouristOfferings } from "@/components/sites/stolitsa-turfirma-ru/TouristOfferings";
@@ -15,22 +17,21 @@ export default function Home() {
       
       <MissionSection />
       <Divider />
-      
       <TouristOfferings />
       <Divider />
-      
-      <ReasonsSection />
+     <ReasonsSection />
       <Divider />
-      
       <TourGuidesSection />
       <Divider />
-      
+      <EventsSection />
+      <Divider />
+      <CompanyAwardsSection />
+      <Divider />
       <TransportSection />
       <Divider />
-      
       <TestimonialsSection />
-          
-      <Footer />
+              
+    <Footer />
     </main>
   );
 }
